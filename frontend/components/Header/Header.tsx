@@ -21,10 +21,10 @@ export function Header() {
             <ToggleThemeButton />
           </li>
           <li className="hover:opacity-70 duration-100 ease-out transition-opacity">
-            <Link href="#latestposts">All posts</Link>
+            <Link href="/all-posts">All posts</Link>
           </li>
           <li className="hover:opacity-70 duration-100 ease-out transition-opacity">
-            <Link href="/contacts">Our developers</Link>
+            <Link href="/integrants">Our developers</Link>
           </li>
         </ul>
       </nav>

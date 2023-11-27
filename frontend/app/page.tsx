@@ -1,12 +1,17 @@
 // Custom components
-import { PostCard } from "@/components/BlogCard/PostCard";
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
+import { LatestPost } from "@/components/LatestPosts/LatestPost";
 
 // Shadcn/ui components
 import { Separator } from "@/components/ui/separator";
 
-export default function Home() {
+// Utils
+import { getPosts } from "@/utils/getPosts";
+
+export default async function HomePage() {
+  const posts = await getPosts();
+
   return (
     <main className="flex flex-col gap-10">
       <Header />
@@ -30,13 +35,8 @@ export default function Home() {
       <Separator />
       <>
         <h2>Latest posts</h2>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+        <section>
+          <LatestPost />
         </section>
       </>
       <Footer />
