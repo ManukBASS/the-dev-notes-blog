@@ -15,7 +15,7 @@ export default async function PostPage(props: { params: { slug: any } }) {
   return (
     <section className="min-h-screen">
       <Link href="/">Back</Link>
-      <div>
+      <div key={post.id}>
         <div dangerouslySetInnerHTML={{ __html: post.attributes.content }} />
       </div>
       <div>{post.attributes.createdAt}</div>
