@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { getPosts } from "@/utils/getPosts";
 
 export default async function HomePage() {
-  const posts = await getPosts();
+  const posts = await getPosts("posts?populate=*");
 
   return (
     <main className="flex flex-col gap-10">

@@ -13,11 +13,13 @@ export default async function PostPage(props: { params: { slug: any } }) {
   if (posts.data.length === 0) return null;
 
   return (
-    <div>
+    <section className="min-h-screen">
       <Link href="/">Back</Link>
-      <div>{post.attributes.content}</div>
-      <div>Published on 24/11/23</div>
-    </div>
+      <div>
+        <div dangerouslySetInnerHTML={{ __html: post.attributes.content }} />
+      </div>
+      <div>{post.attributes.createdAt}</div>
+    </section>
   );
 }
 

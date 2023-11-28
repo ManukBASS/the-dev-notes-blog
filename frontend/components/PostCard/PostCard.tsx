@@ -22,7 +22,10 @@ export function PostCard({
 }: PostCardTypes) {
   return (
     <Link href={`post/${slug}`} className="cursor-default">
-      <Card className="p-6 pt-12 flex flex-col gap-5 hover:opacity-70 hover:scale-105 hover:border-purple-600 transition-[scale, opacity] duration-100 shadow-lg">
+      <Card
+        className="p-6 pt-12 flex flex-col gap-5 hover:opacity-70 hover:scale-105 
+      hover:border-purple-600 transition-[scale, opacity] duration-100 shadow-lg"
+      >
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         <CardFooter className="flex justify-end items-center ">
