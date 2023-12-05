@@ -4,12 +4,10 @@ import Link from "next/link";
 // Shadcn/ui imports
 import { Separator } from "../ui/separator";
 
-// Custom components
-import { SearchPosts } from "../SearchPosts/SearchPosts";
-
 // Icons
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, Search } from "lucide-react";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 
 export function PostHeader() {
   return (
@@ -23,8 +21,14 @@ export function PostHeader() {
             </Button>
           </Link>
         </div>
-        <div>
-          <SearchPosts />
+        <div></div>
+        <div className="flex items-center gap-4">
+          <Search className="hidden md:block" />
+          <Input
+            placeholder="Search"
+            type="search"
+            className="w-56 outline-none"
+          />
         </div>
       </header>
       <Separator />

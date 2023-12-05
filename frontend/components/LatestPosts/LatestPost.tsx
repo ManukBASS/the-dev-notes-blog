@@ -1,6 +1,5 @@
 // Custom components
 import { PostCard } from "@/components/PostCard/PostCard";
-
 // Get posts
 import { getPosts } from "@/utils/getPosts";
 
