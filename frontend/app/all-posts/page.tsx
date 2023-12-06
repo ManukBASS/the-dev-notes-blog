@@ -14,7 +14,7 @@ export default async function PostsPage() {
   return (
     <div>
       <PostHeader />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 py-4">
+      <div className="grid grid-cols-1 gap-7 py-4">
         {posts.data.map((post: PostTypes) => (
           <div key={post.id}>
             <PostCard

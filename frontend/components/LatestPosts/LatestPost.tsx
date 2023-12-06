@@ -10,7 +10,7 @@ export async function LatestPost() {
   const posts = await getPosts("posts?populate=*");
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+    <section className="grid grid-cols-1 gap-7">
       {posts.data.map((post: PostTypes) => (
         <div key={post.id}>
           <PostCard

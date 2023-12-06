@@ -27,7 +27,7 @@ module.exports = {
           foreground: "hsl(var(--primary-foreground))",
         },
         fontFamily: {
-          ubuntu: "var(--font-ubuntu)",
+          jetbrains: "var(--font-jetbrains)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
