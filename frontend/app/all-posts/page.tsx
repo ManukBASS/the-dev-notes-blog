@@ -1,15 +1,17 @@
+"use client";
+
 // Custom components
 import { PostCard } from "@/components/PostCard/PostCard";
 import { PostHeader } from "@/components/PostHeader/PostHeader";
 
 // Get posts
-import { getPosts } from "@/utils/getPosts";
+import { usePosts } from "@/utils/getPosts";
 
 // Types
 import { PostTypes } from "@/utils/PostTypes";
 
-export default async function PostsPage() {
-  const posts = await getPosts("posts?populate=*");
+export default function PostsPage() {
+  const { data: posts, isError, isLoading } = usePosts("posts?populate=*");
 
   return (
     <div>
@@ -26,7 +28,6 @@ export default async function PostsPage() {
             />
           </div>
         ))}
-        P
       </div>
     </div>
   );

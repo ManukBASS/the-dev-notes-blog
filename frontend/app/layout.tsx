@@ -1,7 +1,6 @@
 // Providers
 import { ThemeProvider } from "@/providers/theme-provider/theme-provider";
-
-// Ubuntu font
+// JETBRAINS font
 import { jetbrains } from "@/fonts/jetbrains";
 
 // Global styles
